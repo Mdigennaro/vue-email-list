@@ -20,9 +20,12 @@
 
         <h1 class="text-uppercase fw-bold">Mail list</h1>
   
-        <ol>
-          <li>{{mail}}</li>
-        </ol>
+        <ul v-if= "mails.length === 10"class="list-unstyled">
+          <li v-for="mail in mails">{{mail}}</li>
+        </ul>
+
+        <h2 v-else class="text-warning">Caricamento di 10 mail</h2>
+
     
       </div>
   
